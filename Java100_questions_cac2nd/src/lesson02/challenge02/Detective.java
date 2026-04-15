@@ -3,7 +3,7 @@
  *
  * 問題2  スケジュールが空いているか確認する
  *
- * 29行目の文を書き換えて
+ * 29行目の文を書き換えて(もしかしたら27行目かもしれません)
  * 実行例と同じメッセージを表示してください。
  *
  * <実行例>
@@ -24,7 +24,7 @@ public class Detective {
 		System.out.println("探偵：");
 		System.out.println("助手君スケジュールはどうなってるかね？\n");
 
-		boolean appointment = false;
+		boolean appointment = true;
 
 		if (appointment) {
 			System.out.println("助手：");
