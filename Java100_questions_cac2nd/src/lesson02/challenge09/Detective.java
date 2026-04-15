@@ -68,6 +68,17 @@ public class Detective {
 
 		//ここに記述
 
+		int tarHeight = 190;
+		int tarWeight = 100;
+
+		if (height == tarHeight && weight == tarWeight) {
+			System.out.println("探偵：");
+			System.out.println("その方は犯人である可能性がありますね。");
+		} else {
+			System.out.println("探偵：");
+			System.out.println("その方は犯人ではありませんね。");
+		}
+
 	}
 
 }
