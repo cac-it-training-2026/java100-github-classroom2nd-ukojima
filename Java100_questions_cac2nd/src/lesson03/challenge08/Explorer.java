@@ -5,7 +5,7 @@
  *
  * 進行方向に洞窟の入り口があります。
  * 洞窟の入り口にはふしぎな石版があり数字が刻まれているのですが、
- * その数字をは1時間ごとに変わり、3が出ないと洞窟の入り口が開きません。
+ * その数字は1時間ごとに変わり、3が出ないと洞窟の入り口が開きません。
  * （数字の範囲は0～9の10通りです。）
  *
  * 探検隊は食糧のサバ缶を隊長のミスで全て失っており、
@@ -59,15 +59,31 @@ public class Explorer {
 		int lithograph = 0;
 		int i = 0;
 
-
 		//ここにdo～while文、if文を利用した処理を記述
+		do {
+			lithograph = (int) (Math.random() * 10);
 
+			if (lithograph == 3) {
+				System.out.println("\n隊長：");
+				System.out.println("やったー！3がでたよ！\n");
+				break;
+			}
+
+			else {
+				System.out.println("\n隊長");
+				System.out.println(lithograph + "だった...");
+				System.out.println("1時間待つよ（" + i + "時間経過）");
+			}
+
+			i++;
+
+		} while (i <= 6);
 
 		if (lithograph == 3) {
 			System.out.println("洞窟の入り口が開きました。");
 		} else {
-			System.out.println("隊長：");
-			System.out.println(lithograph + "だった...（" + (i - 1)+ "時間経過）");
+			System.out.println("\n隊長：");
+			System.out.println(lithograph + "だった...（" + (i - 1) + "時間経過）");
 			System.out.println("あの時サバ缶に手を付けていなければ...");
 			System.out.println("探検隊は全滅しました。");
 		}
